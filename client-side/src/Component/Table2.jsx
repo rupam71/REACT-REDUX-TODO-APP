@@ -21,9 +21,9 @@ class Table2 extends Component {
                         {
                             this.props.post.map(posts=>{
                                 return (
-                                    <tr key={posts.id}>
+                                    <tr key={posts.id} style={{backgroundColor:'#F8F9FA',border:'1px solid black'}}>
                                         <th scope="col">
-                                            <Link to={"posts/"+posts.id}>{posts.title}</Link>
+                                            <Link to={"posts/"+posts.id} style={{color:'black',textDecoration:'none',fontSize:'18px',margin:'20px'}}>{posts.title}</Link>
                                         </th>
                                     </tr>
                                 )
