@@ -1,5 +1,4 @@
-export default function (state = [] , action) {
-    //  console.log(action)
+export default function (state = [] , action) { 
       switch(action.type) {
           case 'NEWTASK' : return [...state, action.payload] 
           case 'CLEARTASK' : return action.payload

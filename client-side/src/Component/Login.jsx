@@ -11,13 +11,10 @@ class Login extends Component {
      }
      onFormSubmit = event => {
         event.preventDefault();
-        const {email,password} = this.state;
-        console.log(email,password);
         this.props.login(this.state)
      }
 
     render() { 
-        console.log(this.props.auth)
         if(this.props.auth.user) {
             history.push('/profile');
         }
@@ -45,8 +42,6 @@ class Login extends Component {
                         <Link to="/signup">Create Account Here</Link>
                     </div>
                 </form>
-                
-                
             </div>
          );
     }
@@ -54,7 +49,6 @@ class Login extends Component {
  
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         auth : state.auth
     }

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 class Profile extends Component {
     state = {  }
     render() { 
-        console.log(this.props.user)
         return ( 
             <div>
                 <h3 className="text-center m-3">Name : {this.props.user.name}</h3>
@@ -15,8 +14,7 @@ class Profile extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    console.log(state)
+const mapStateToProps = (state) => { 
     return {
         user : state.auth.user
     }

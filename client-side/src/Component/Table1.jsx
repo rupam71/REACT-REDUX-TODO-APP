@@ -10,17 +10,14 @@ class Table1 extends Component {
      }
      onFormSubmit = event => {
         event.preventDefault();
-        const task = this.state.task
-        console.log(task);
-        const id = (this.props.task.length)+1
-        console.log(" LENGTH: ",id);
+        const task = this.state.task 
+        const id = (this.props.task.length)+1 
         const date = moment().format('MMMM Do YYYY, h:mm:ss a');
         const Task = {
             id,
             task,
             date
         }
-        console.log(Task)
         this.props.newTask(Task)
         this.setState({task:''})
      }
@@ -73,8 +70,7 @@ class Table1 extends Component {
 }
  
 
-const mapStateToProps = (state) => {
-    console.log(state)
+const mapStateToProps = (state) => { 
     return {
         auth : state.auth,
         task : state.task

@@ -14,8 +14,6 @@ class Signup extends Component {
 
      onFormSubmit = event => {
         event.preventDefault();
-        const {name,email,password,phoneNumber} = this.state;
-        console.log(name,email,password,phoneNumber);
         this.props.signup(this.state)
      }
 
@@ -69,7 +67,6 @@ class Signup extends Component {
 }
  
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         message : state.auth.message
     }

@@ -11,15 +11,15 @@ class Home extends Component {
         if(this.props.user){
             return (
                 <div>
-                    <Link to="/table1" class="btn btn-primary m-3">Create Your task</Link>
-                    <Link to="/table2" class="btn btn-primary m-3">JSON PlaceHolder</Link>
+                    <Link to="/table1" className="btn btn-primary m-3">Create Your task</Link>
+                    <Link to="/table2" className="btn btn-primary m-3">JSON PlaceHolder</Link>
                 </div>
             )
         } else {
             return (
                 <div>
-                    <Link to="/signup" class="btn btn-primary m-3">Sign Up</Link>
-                    <Link to="/login" class="btn btn-info m-3">Login</Link>
+                    <Link to="/signup" className="btn btn-primary m-3">Sign Up</Link>
+                    <Link to="/login" className="btn btn-info m-3">Login</Link>
                 </div>
             )
         }
@@ -27,21 +27,20 @@ class Home extends Component {
     render() { 
         return ( 
             <div>
-                <div class="row header">
-                    <div class="col-md-4" style={{padding: "102px 16px 0"}}>
-                        <img class="image-left" src={left} alt="left" />
+                <div className="row header">
+                    <div className="col-md-4" style={{padding: "102px 16px 0"}}>
+                        <img className="image-left" src={left} alt="left" />
                     </div>
-                    <div class="col-md-4" style={{alignSelf: "center"}}>
-                        <div class="text-center">
-                            <h1><i class="fas fa-clipboard-list "></i></h1>
+                    <div className="col-md-4" style={{alignSelf: "center"}}>
+                        <div className="text-center">
+                            <h1><i className="fas fa-clipboard-list "></i></h1>
                             <h1>Todo Land</h1>
-                            <h4>Create Todo, Save Time</h4>
-                            
-                            {this.renderButton()}
+                            <h4>Create Todo, Save Time</h4> 
+                                {this.renderButton()}
                         </div>
                     </div>
-                    <div class="col-md-4" style={{padding: "44px 0 0 100px"}}>
-                        <img class="image-right" src={right} alt="right" />
+                    <div className="col-md-4" style={{padding: "44px 0 0 100px"}}>
+                        <img className="image-right" src={right} alt="right" />
                     </div>
                 </div>
             </div>
@@ -50,7 +49,6 @@ class Home extends Component {
 }
  
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         user : state.auth.user
     }

@@ -12,33 +12,33 @@ class Navbar extends Component {
     rendernavbar = () => {
         if(this.props.user){
             return (
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item">
-                        <Link class="nav-link" aria-current="page" to="/">Home</Link>
+                <ul className="navbar-nav justify-content-end">
+                    <li className="nav-item">
+                        <Link className="nav-link" aria-current="page" to="/">Home</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/profile">Profile</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/profile">Profile</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/table1">Table 1</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/table1">Table 1</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/table2">Table 2</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/table2">Table 2</Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link onClick={this.handleLogout}            
-                        class="nav-link" >Logout</Link>
+                        className="nav-link" >Logout</Link>
                     </li>
                 </ul>
             )
         } else {
             return (
-                <ul class="navbar-nav justify-content-end">
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/signup">Sign Up</Link>
+                <ul className="navbar-nav justify-content-end">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/signup">Sign Up</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/login">Login</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/login">Login</Link>
                     </li>
                 </ul>
             )
@@ -47,13 +47,13 @@ class Navbar extends Component {
     render() { 
         return ( 
             <div>
-                <nav class="navbar navbar-expand-sm navbar-light bg-white my-3">
-                    <div class="container-fluid">
-                        <Link class="navbar-brand ms-5" to="/">Todo</Link>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                <nav className="navbar navbar-expand-sm navbar-light bg-white my-3">
+                    <div className="container-fluid">
+                        <Link className="navbar-brand ms-5" to="/">Todo</Link>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse d-flex justify-content-end me-5" id="navbarNav">
+                        <div className="collapse navbar-collapse d-flex justify-content-end me-5" id="navbarNav">
                             {this.rendernavbar()}
                         </div>
                     </div>
@@ -65,7 +65,6 @@ class Navbar extends Component {
  
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         user : state.auth.user
     }

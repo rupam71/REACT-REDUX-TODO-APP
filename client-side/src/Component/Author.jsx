@@ -11,8 +11,6 @@ class Author extends Component {
     }
 
     render() { 
-        console.log("CDM33: ",this.props.userId)
-        // this.props.getAuthor(this.props.userId)
         return ( 
             <div>
                 {this.props.author.name}
@@ -22,7 +20,6 @@ class Author extends Component {
 }
  
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         auth : state.auth,
         author : state.author

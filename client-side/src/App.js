@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Component/Home';
 import Navbar from './Component/Navbar';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import history from './history';
 import Login from './Component/Login';
 import Signup from './Component/Signup';
@@ -27,6 +27,7 @@ class App extends Component {
               <Route path="/table1" exact component={Table1} />
               <Route path="/table2" exact component={Table2} /> 
               <Route path="/posts/:id" exact component={Posts} />
+              <Redirect to="/" />
             </Switch>
           </div>
         </Router>
