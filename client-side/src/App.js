@@ -10,12 +10,19 @@ import Profile from './Component/Profile';
 import Table1 from './Component/Table1';
 import Table2 from './Component/Table2';
 import Posts from './Component/Posts';
+import { Helmet } from 'react-helmet';
 
 class App extends Component {
   state = {  }
   render() { 
     return ( 
       <div className="container">
+        <Helmet>
+            <title>{"Testing Helme"}</title>
+            <meta name="description" content={"Here Today, I checking Hemet"} />
+            <meta name="viewport" content={"width=device-width, initial-scale=1"} />
+            <meta name="theme-color" content={"#000000"} />
+        </Helmet>
         <Router history={history}>
           <div>
             <Navbar />
